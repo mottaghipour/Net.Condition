@@ -23,5 +23,15 @@ namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.StringConditionHelpers
 
             Assert.False(result);
         }
+
+        [Fact]
+        public void IsEmpty_ReturnsFalse_WhenStringIsNull()
+        {
+            var input = null as string;
+
+            var result = input.IsEmpty();
+
+            Assert.False(result);
+        }
     }
 }
