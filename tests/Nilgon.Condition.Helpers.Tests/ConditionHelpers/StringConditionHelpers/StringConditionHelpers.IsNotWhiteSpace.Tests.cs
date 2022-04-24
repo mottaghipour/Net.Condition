@@ -13,7 +13,17 @@ namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.StringConditionHelpers
 
             Assert.False(result);
         }
-        
+
+        [Fact]
+        public void IsNotWhiteSpace_ReturnsTrue_WhenStringIsEmpty()
+        {
+            string stringToTest = string.Empty;
+
+            bool result = stringToTest.IsNotWhiteSpace();
+
+            Assert.True(result);
+        }
+
         [Fact]
         public void IsNotWhiteSpace_ReturnsTrue_WhenStringIsFull()
         {
