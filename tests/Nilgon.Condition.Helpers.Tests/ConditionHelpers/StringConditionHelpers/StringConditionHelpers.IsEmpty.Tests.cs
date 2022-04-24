@@ -7,19 +7,19 @@ namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.StringConditionHelpers
         [Fact]
         public void IsEmpty_ReturnsTrue_WhenStringIsEmpty()
         {
-            string input = string.Empty;
+            string stringToTest = string.Empty;
 
-            bool result = input.IsEmpty();
+            bool result = stringToTest.IsEmpty();
 
             Assert.True(result);
         }
 
         [Fact]
-        public void IsEmpty_ReturnsFalse_WhenStringIsNotEmpty()
+        public void IsEmpty_ReturnsFalse_WhenStringIsFull()
         {
-            string input = "test";
+            string stringToTest = "test";
 
-            bool result = input.IsEmpty();
+            bool result = stringToTest.IsEmpty();
 
             Assert.False(result);
         }
@@ -27,9 +27,9 @@ namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.StringConditionHelpers
         [Fact]
         public void IsEmpty_ReturnsFalse_WhenStringIsNull()
         {
-            string input = null as string;
+            string stringToTest = null;
 
-            bool result = input.IsEmpty();
+            bool result = stringToTest.IsEmpty();
 
             Assert.False(result);
         }
