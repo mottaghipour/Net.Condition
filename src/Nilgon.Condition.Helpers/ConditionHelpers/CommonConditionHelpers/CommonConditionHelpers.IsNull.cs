@@ -1,4 +1,4 @@
-﻿namespace Nilgon.Condition.Helpers.ConditionHelpers.CommonConditionHelpers
+﻿namespace Nilgon.Condition.Helpers
 {
     public static partial class CommonConditionHelpers
     {

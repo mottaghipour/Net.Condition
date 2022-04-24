@@ -1,5 +1,4 @@
-﻿using Nilgon.Condition.Helpers.ConditionHelpers.CommonConditionHelpers;
-using Xunit;
+﻿using Xunit;
 
 namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.CommonConditionHelpers
 {
@@ -16,7 +15,7 @@ namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.CommonConditionHelpers
         }
         
         [Fact]
-        public void NotNullValue_ReturnFalse()
+        public void FullValue_ReturnFalse()
         {
             var value = "test";
 
