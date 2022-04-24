@@ -5,7 +5,7 @@ namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.CommonConditionHelpers
     public sealed class CommonConditionHelpers_IsNotNull_Tests
     {
         [Fact]
-        public void IsNull_ReturnsTrue_WhenValueIsNull()
+        public void IsNotNull_ReturnsFalse_WhenValueIsNull()
         {
             var value = null as string;
 
@@ -15,7 +15,7 @@ namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.CommonConditionHelpers
         }
 
         [Fact]
-        public void IsNull_ReturnsFalse_WhenValueIsNotNull()
+        public void IsNotNull_ReturnsTrue_WhenValueIsNotNull()
         {
             var value = "test";
 
