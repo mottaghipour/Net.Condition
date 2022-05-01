@@ -5,16 +5,6 @@ namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.StringConditionHelpers
     public sealed class StringConditionHelpers_IsNotWhiteSpace_Tests
     {
         [Fact]
-        public void IsNotWhiteSpace_ReturnsFalse_WhenStringIsWhiteSpace()
-        {
-            string stringToTest = " ";
-
-            bool result = stringToTest.IsNotWhiteSpace();
-
-            Assert.False(result);
-        }
-
-        [Fact]
         public void IsNotWhiteSpace_ReturnsTrue_WhenStringIsEmpty()
         {
             string stringToTest = string.Empty;
@@ -42,6 +32,16 @@ namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.StringConditionHelpers
             bool result = stringToTest.IsNotWhiteSpace();
 
             Assert.True(result);
+        }
+        
+        [Fact]
+        public void IsNotWhiteSpace_ReturnsFalse_WhenStringIsWhiteSpace()
+        {
+            string stringToTest = " ";
+
+            bool result = stringToTest.IsNotWhiteSpace();
+
+            Assert.False(result);
         }
     }
 }
