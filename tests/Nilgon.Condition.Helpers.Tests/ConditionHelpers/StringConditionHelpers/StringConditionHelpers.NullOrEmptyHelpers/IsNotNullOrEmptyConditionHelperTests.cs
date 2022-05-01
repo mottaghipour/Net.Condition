@@ -1,8 +1,8 @@
 ﻿using Xunit;
 
-namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.StringConditionHelpers
+namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.StringConditionHelpers.NullOrEmptyHelpers
 {
-	public sealed class StringConditionHelpers_IsNotNullOrEmpty_Tests
+	public sealed class IsNotNullOrEmpty_Condition_Helper_Tests
 	{
 		[Fact]
 		public void IsNotNullOrEmpty_ReturnsTrue_WhenStringIsWhiteSpace()

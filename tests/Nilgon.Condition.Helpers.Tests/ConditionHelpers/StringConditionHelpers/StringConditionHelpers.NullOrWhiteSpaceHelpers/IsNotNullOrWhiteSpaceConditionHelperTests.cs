@@ -1,23 +1,23 @@
 ﻿using Xunit;
 
-namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.StringConditionHelpers
+namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.StringConditionHelpers.NotNullOrWhiteSpaceHelpers
 {
-    public sealed class StringConditionHelpers_IsNotNullOrWhiteSpace_Tests
+    public sealed class IsNotNullOrWhiteSpace_Condition_Helper_Tests
     {
         [Fact]
-        public void IsNotNullOrWhiteSpace_ReturnsTrue_WhenStringIsFull()
+        public void IsNotNullOrWhiteSpace_ReturnsTrue_WhenStringIsEmpty()
         {
-            string stringToTest = "Test";
+            string stringToTest = "";
 
             bool result = stringToTest.IsNotNullOrWhiteSpace();
 
             Assert.True(result);
         }
-
+        
         [Fact]
-        public void IsNotNullOrWhiteSpace_ReturnsTrue_WhenStringIsEmpty()
+        public void IsNotNullOrWhiteSpace_ReturnsTrue_WhenStringIsFull()
         {
-            string stringToTest = "";
+            string stringToTest = "Test";
 
             bool result = stringToTest.IsNotNullOrWhiteSpace();
 

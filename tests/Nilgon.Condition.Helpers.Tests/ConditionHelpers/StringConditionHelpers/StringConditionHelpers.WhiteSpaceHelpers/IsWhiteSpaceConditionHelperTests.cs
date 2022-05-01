@@ -1,8 +1,8 @@
 ﻿using Xunit;
 
-namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.StringConditionHelpers
+namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.StringConditionHelpers.WhiteSpaceHelpers
 {
-    public sealed class StringConditionHelpers_IsWhiteSpace_Tests
+    public sealed class IsWhiteSpace_Condition_Helper_Tests
     {
         [Fact]
         public void IsWhiteSpace_ReturnsTrue_WhenStringIsWhiteSpace()
@@ -12,6 +12,17 @@ namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.StringConditionHelpers
             bool result = stringToTest.IsWhiteSpace();
 
             Assert.True(result);
+        }
+
+
+        [Fact]
+        public void IsWhiteSpace_ReturnsFalse_WhenStringIsNull()
+        {
+            string stringToTest = null;
+
+            bool result = stringToTest.IsWhiteSpace();
+
+            Assert.False(result);
         }
 
         [Fact]
@@ -29,16 +40,6 @@ namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.StringConditionHelpers
         public void IsWhiteSpace_ReturnsFalse_WhenStringIsFull()
         {
             string stringToTest = "test";
-
-            bool result = stringToTest.IsWhiteSpace();
-
-            Assert.False(result);
-        }
-
-        [Fact]
-        public void IsWhiteSpace_ReturnsFalse_WhenStringIsNull()
-        {
-            string stringToTest = null;
 
             bool result = stringToTest.IsWhiteSpace();
 

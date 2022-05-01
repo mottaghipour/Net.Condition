@@ -1,8 +1,8 @@
 ﻿using Xunit;
 
-namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.CommonConditionHelpers
+namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.CommonConditionHelpers.NullHelpers
 {
-    public sealed class CommonConditionHelpers_IsNotNull_Tests
+    public sealed class IsNotNull_Condition_Helper_Tests
     {
         [Fact]
         public void IsNotNull_ReturnsTrue_WhenValueIsNotNull()

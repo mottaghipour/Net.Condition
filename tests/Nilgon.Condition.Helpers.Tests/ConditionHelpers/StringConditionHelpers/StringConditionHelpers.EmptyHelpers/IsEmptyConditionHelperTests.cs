@@ -1,8 +1,8 @@
 ﻿using Xunit;
 
-namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.StringConditionHelpers
+namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.StringConditionHelpers.EmptyHelpers
 {
-    public sealed class StringConditionHelpers_IsEmpty_Tests
+    public sealed class IsEmpty_Condition_Helper_Tests
     {
         [Fact]
         public void IsEmpty_ReturnsTrue_WhenStringIsEmpty()
@@ -12,6 +12,16 @@ namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.StringConditionHelpers
             bool result = stringToTest.IsEmpty();
 
             Assert.True(result);
+        }
+
+        [Fact]
+        public void IsEmpty_ReturnsFalse_WhenStringIsNull()
+        {
+            string stringToTest = null;
+
+            bool result = stringToTest.IsEmpty();
+
+            Assert.False(result);
         }
 
         [Fact]
@@ -28,16 +38,6 @@ namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.StringConditionHelpers
         public void IsEmpty_ReturnsFalse_WhenStringIsFull()
         {
             string stringToTest = "test";
-
-            bool result = stringToTest.IsEmpty();
-
-            Assert.False(result);
-        }
-
-        [Fact]
-        public void IsEmpty_ReturnsFalse_WhenStringIsNull()
-        {
-            string stringToTest = null;
 
             bool result = stringToTest.IsEmpty();
 

@@ -6,5 +6,10 @@
         {
             return value == string.Empty;
         }
+
+        public static bool IsNotEmpty(this string value)
+        {
+            return value != string.Empty;
+        }
     }
 }
