@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.StringConditionHelpers.NotNullOrWhiteSpaceHelpers
+namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.StringConditionHelpers.NullOrWhiteSpaceHelpers
 {
     public sealed class IsNullOrWhiteSpace_Condition_Helper_Tests
     {
