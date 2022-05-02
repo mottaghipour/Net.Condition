@@ -7,9 +7,9 @@ namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.CommonConditionHelpers
         [Fact]
         public void IsNull_ReturnsTrue_WhenValueIsNull()
         {
-            object value = null;
+            object objectToTest = null;
 
-            bool result = value.IsNull();
+            bool result = objectToTest.IsNull();
 
             Assert.True(result);
         }
@@ -17,9 +17,9 @@ namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.CommonConditionHelpers
         [Fact]
         public void IsNull_ReturnsFalse_WhenValueIsNotNull()
         {
-            object value = "test";
+            object objectToTest = "test";
 
-            bool result = value.IsNull();
+            bool result = objectToTest.IsNull();
 
             Assert.False(result);
         }

@@ -7,7 +7,7 @@ namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.StringConditionHelpers
         [Fact]
         public void IsNotNullOrWhiteSpace_ReturnsTrue_WhenStringIsEmpty()
         {
-            string stringToTest = "";
+            string stringToTest = string.Empty;
 
             bool result = stringToTest.IsNotNullOrWhiteSpace();
 
