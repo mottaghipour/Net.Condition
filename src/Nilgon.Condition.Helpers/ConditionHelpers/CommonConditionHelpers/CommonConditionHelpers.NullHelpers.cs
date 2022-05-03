@@ -12,14 +12,9 @@
         /// </returns>
         public static bool IsNull<T>(this T value)
         {
-            bool conditionResult = CheckIsNullCondition(value);
+            bool conditionResult = value is null;
             
             return conditionResult;
-        }
-
-        private static bool CheckIsNullCondition<T>(T value)
-        {
-            return value is null;
         }
 
         /// <summary>
@@ -32,14 +27,9 @@
         /// </returns>
         public static bool IsNotNull<T>(this T value)
         {
-            bool conditionResult = CheckIsNotNullCondition(value);
+            bool conditionResult = value is not null;
             
             return conditionResult;
-        }
-
-        private static bool CheckIsNotNullCondition<T>(T value)
-        {
-            return value is not null;
         }
     }
 }
