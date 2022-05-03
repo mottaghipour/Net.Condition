@@ -4,12 +4,16 @@
     {
         public static bool IsNullOrEmptyOrWhiteSpace(this string value)
         {
-            return string.IsNullOrWhiteSpace(value);
+            bool conditionResult = string.IsNullOrWhiteSpace(value);
+
+            return conditionResult;
         }
 
         public static bool IsNotNullOrEmptyOrWhiteSpace(this string value)
         {
-            return !string.IsNullOrWhiteSpace(value);
+            bool conditionResult = !string.IsNullOrWhiteSpace(value);
+
+            return conditionResult;
         }
     }
 }
