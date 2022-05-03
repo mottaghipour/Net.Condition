@@ -4,12 +4,16 @@
     {
         public static bool IsWhiteSpace(this string value)
         {
-            return value == " ";
+            bool conditionResult = value == " ";
+
+            return conditionResult;
         }
 
         public static bool IsNotWhiteSpace(this string value)
         {
-            return value != " ";
+            bool conditionResult = value != " ";
+
+            return conditionResult;
         }
     }
 }

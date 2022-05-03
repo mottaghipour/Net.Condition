@@ -4,12 +4,16 @@
     {
         public static bool IsEmpty(this string value)
         {
-            return value == string.Empty;
+            bool conditionResult = value == string.Empty;
+
+            return conditionResult;
         }
 
         public static bool IsNotEmpty(this string value)
         {
-            return value != string.Empty;
+            bool conditionResult = value != string.Empty;
+
+            return conditionResult;
         }
     }
 }
