@@ -2,6 +2,13 @@
 
 public static partial class ByteConditionHelpers
 {
+    /// <summary>
+    ///    Checks if the <paramref name="value" /> is odd.
+    /// </summary>
+    /// <param name="value"></param>
+    /// <returns>
+    ///    <see langword="true" /> if the <paramref name="value"/> is odd; otherwise, <see langword="false" />.
+    /// </returns>
     public static bool IsOdd(this byte value)
     {
         bool conditionResult = value % 2 != 0;
@@ -9,6 +16,13 @@ public static partial class ByteConditionHelpers
         return conditionResult;
     }
 
+    /// <summary>
+    ///    Checks if the <paramref name="value" /> is not odd.
+    /// </summary>
+    /// <param name="value"></param>
+    /// <returns>
+    ///    <see langword="true" /> if the <paramref name="value"/> is not odd; otherwise, <see langword="false" />.
+    /// </returns>
     public static bool IsNotOdd(this byte value)
     {
         bool conditionResult = value % 2 == 0;
