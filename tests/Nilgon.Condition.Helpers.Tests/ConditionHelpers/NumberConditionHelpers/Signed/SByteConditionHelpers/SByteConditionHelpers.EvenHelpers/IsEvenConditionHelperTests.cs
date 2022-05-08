@@ -1,0 +1,26 @@
+﻿using Xunit;
+
+namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.SByteConditionHelpers.EvenHelpers;
+
+public sealed class IsEven_Condition_Helper_Tests
+{
+    [Fact]
+    public void IsEven_ReturnsTrue_WhenNumberIsEven()
+    {
+        sbyte numberToTest = 2;
+
+        bool result = numberToTest.IsEven();
+
+        Assert.True(result);
+    }
+
+    [Fact]
+    public void IsEven_ReturnsFalse_WhenNumberIsOdd()
+    {
+        sbyte numberToTest = 1;
+
+        bool result = numberToTest.IsEven();
+
+        Assert.False(result);
+    }
+}
