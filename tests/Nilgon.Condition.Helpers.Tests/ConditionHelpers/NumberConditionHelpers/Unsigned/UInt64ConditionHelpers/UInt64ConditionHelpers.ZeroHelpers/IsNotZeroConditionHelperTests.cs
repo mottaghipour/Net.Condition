@@ -1,5 +1,4 @@
-﻿using System;
-using Xunit;
+﻿using Xunit;
 
 namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.UInt64ConditionHelpers.ZeroHelpers
 {
