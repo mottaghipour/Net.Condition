@@ -1,27 +1,26 @@
 ﻿using Xunit;
 
-namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.CommonConditionHelpers.NullHelpers
+namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.CommonConditionHelpers.NullHelpers;
+
+public sealed class IsNull_Condition_Helper_Tests
 {
-    public sealed class IsNull_Condition_Helper_Tests
+    [Fact]
+    public void IsNull_ReturnsTrue_WhenValueIsNull()
     {
-        [Fact]
-        public void IsNull_ReturnsTrue_WhenValueIsNull()
-        {
-            object objectToTest = null;
+        object objectToTest = null;
 
-            bool result = objectToTest.IsNull();
+        bool result = objectToTest.IsNull();
 
-            Assert.True(result);
-        }
-        
-        [Fact]
-        public void IsNull_ReturnsFalse_WhenValueIsNotNull()
-        {
-            object objectToTest = "test";
+        Assert.True(result);
+    }
+    
+    [Fact]
+    public void IsNull_ReturnsFalse_WhenValueIsNotNull()
+    {
+        object objectToTest = "test";
 
-            bool result = objectToTest.IsNull();
+        bool result = objectToTest.IsNull();
 
-            Assert.False(result);
-        }
+        Assert.False(result);
     }
 }

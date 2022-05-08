@@ -1,47 +1,46 @@
 ﻿using Xunit;
 
-namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.StringConditionHelpers.NullOrEmptyOrWhiteSpaceHelpers
+namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.StringConditionHelpers.NullOrEmptyOrWhiteSpaceHelpers;
+
+public sealed class IsNullOrEmptyOrWhiteSpace_Condition_Helper_Tests
 {
-    public sealed class IsNullOrEmptyOrWhiteSpace_Condition_Helper_Tests
+    [Fact]
+    public void IsNullOrEmptyOrWhiteSpace_ReturnsTrue_WhenStringIsNull()
     {
-        [Fact]
-        public void IsNullOrEmptyOrWhiteSpace_ReturnsTrue_WhenStringIsNull()
-        {
-            string stringToTest = null;
+        string stringToTest = null;
 
-            bool result = stringToTest.IsNullOrEmptyOrWhiteSpace();
+        bool result = stringToTest.IsNullOrEmptyOrWhiteSpace();
 
-            Assert.True(result);
-        }
+        Assert.True(result);
+    }
 
-        [Fact]
-        public void IsNullOrEmptyOrWhiteSpace_ReturnsTrue_WhenStringIsEmpty()
-        {
-            string stringToTest = string.Empty;
+    [Fact]
+    public void IsNullOrEmptyOrWhiteSpace_ReturnsTrue_WhenStringIsEmpty()
+    {
+        string stringToTest = string.Empty;
 
-            bool result = stringToTest.IsNullOrEmptyOrWhiteSpace();
+        bool result = stringToTest.IsNullOrEmptyOrWhiteSpace();
 
-            Assert.True(result);
-        }
+        Assert.True(result);
+    }
 
-        [Fact]
-        public void IsNullOrEmptyOrWhiteSpace_ReturnsTrue_WhenStringIsWhiteSpace()
-        {
-            string stringToTest = " ";
+    [Fact]
+    public void IsNullOrEmptyOrWhiteSpace_ReturnsTrue_WhenStringIsWhiteSpace()
+    {
+        string stringToTest = " ";
 
-            bool result = stringToTest.IsNullOrEmptyOrWhiteSpace();
+        bool result = stringToTest.IsNullOrEmptyOrWhiteSpace();
 
-            Assert.True(result);
-        }
+        Assert.True(result);
+    }
 
-        [Fact]
-        public void IsNullOrEmptyOrWhiteSpace_ReturnsFalse_WhenStringIsFull()
-        {
-            string stringToTest = "test";
+    [Fact]
+    public void IsNullOrEmptyOrWhiteSpace_ReturnsFalse_WhenStringIsFull()
+    {
+        string stringToTest = "test";
 
-            bool result = stringToTest.IsNullOrEmptyOrWhiteSpace();
+        bool result = stringToTest.IsNullOrEmptyOrWhiteSpace();
 
-            Assert.False(result);
-        }
+        Assert.False(result);
     }
 }

@@ -1,19 +1,18 @@
-﻿namespace Nilgon.Condition.Helpers
+﻿namespace Nilgon.Condition.Helpers;
+
+public static partial class UInt64ConditionHelpers
 {
-    public static partial class UInt64ConditionHelpers
+    public static bool IsZero(this ulong value)
     {
-        public static bool IsZero(this ulong value)
-        {
-            bool conditionResult = value == 0;
+        bool conditionResult = value == 0;
 
-            return conditionResult;
-        }
+        return conditionResult;
+    }
 
-        public static bool IsNotZero(this ulong value)
-        {
-            bool conditionResult = value != 0;
+    public static bool IsNotZero(this ulong value)
+    {
+        bool conditionResult = value != 0;
 
-            return conditionResult;
-        }
+        return conditionResult;
     }
 }

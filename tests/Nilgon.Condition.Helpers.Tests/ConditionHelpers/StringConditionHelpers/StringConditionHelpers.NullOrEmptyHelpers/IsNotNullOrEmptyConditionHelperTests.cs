@@ -1,47 +1,46 @@
 ﻿using Xunit;
 
-namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.StringConditionHelpers.NullOrEmptyHelpers
+namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.StringConditionHelpers.NullOrEmptyHelpers;
+
+public sealed class IsNotNullOrEmpty_Condition_Helper_Tests
 {
-	public sealed class IsNotNullOrEmpty_Condition_Helper_Tests
-	{
-		[Fact]
-		public void IsNotNullOrEmpty_ReturnsTrue_WhenStringIsWhiteSpace()
+	[Fact]
+	public void IsNotNullOrEmpty_ReturnsTrue_WhenStringIsWhiteSpace()
         {
-			string stringToTest = " ";
+		string stringToTest = " ";
 
-			bool result = stringToTest.IsNotNullOrEmpty();
+		bool result = stringToTest.IsNotNullOrEmpty();
 
-			Assert.True(result);
+		Assert.True(result);
         }
 
-		[Fact]
-		public void IsNotNullOrEmpty_ReturnsTrue_WhenStringIsFull()
-		{
-			string stringToTest = "test";
+	[Fact]
+	public void IsNotNullOrEmpty_ReturnsTrue_WhenStringIsFull()
+	{
+		string stringToTest = "test";
 
-			bool result = stringToTest.IsNotNullOrEmpty();
+		bool result = stringToTest.IsNotNullOrEmpty();
 
-			Assert.True(result);
-		}
+		Assert.True(result);
+	}
 
-		[Fact]
-		public void IsNotNullOrEmpty_ReturnsFalse_WhenStringIsNull()
-		{
-			string stringToTest = null;
+	[Fact]
+	public void IsNotNullOrEmpty_ReturnsFalse_WhenStringIsNull()
+	{
+		string stringToTest = null;
 
-			bool result = stringToTest.IsNotNullOrEmpty();
+		bool result = stringToTest.IsNotNullOrEmpty();
 
-			Assert.False(result);
-		}
+		Assert.False(result);
+	}
 
-		[Fact]
-		public void IsNotNullOrEmpty_ReturnsFalse_WhenStringIsEmpty()
-		{
-			string stringToTest = string.Empty;
+	[Fact]
+	public void IsNotNullOrEmpty_ReturnsFalse_WhenStringIsEmpty()
+	{
+		string stringToTest = string.Empty;
 
-			bool result = stringToTest.IsNotNullOrEmpty();
+		bool result = stringToTest.IsNotNullOrEmpty();
 
-			Assert.False(result);
-		}
+		Assert.False(result);
 	}
 }

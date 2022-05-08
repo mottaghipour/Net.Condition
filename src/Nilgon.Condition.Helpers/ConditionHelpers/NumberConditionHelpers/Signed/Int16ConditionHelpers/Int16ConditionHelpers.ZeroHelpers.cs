@@ -1,19 +1,18 @@
-﻿namespace Nilgon.Condition.Helpers
+﻿namespace Nilgon.Condition.Helpers;
+
+public static partial class Int16ConditionHelpers
 {
-    public static partial class Int16ConditionHelpers
+    public static bool IsZero(this short value)
     {
-        public static bool IsZero(this short value)
-        {
-            bool conditionResult = value == 0;
+        bool conditionResult = value == 0;
 
-            return conditionResult;
-        }
+        return conditionResult;
+    }
 
-        public static bool IsNotZero(this short value)
-        {
-            bool conditionResult = value != 0;
+    public static bool IsNotZero(this short value)
+    {
+        bool conditionResult = value != 0;
 
-            return conditionResult;
-        }
+        return conditionResult;
     }
 }

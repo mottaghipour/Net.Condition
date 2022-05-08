@@ -1,47 +1,46 @@
 ﻿using Xunit;
 
-namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.StringConditionHelpers.EmptyHelpers
+namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.StringConditionHelpers.EmptyHelpers;
+
+public sealed class IsEmpty_Condition_Helper_Tests
 {
-    public sealed class IsEmpty_Condition_Helper_Tests
+    [Fact]
+    public void IsEmpty_ReturnsTrue_WhenStringIsEmpty()
     {
-        [Fact]
-        public void IsEmpty_ReturnsTrue_WhenStringIsEmpty()
-        {
-            string stringToTest = string.Empty;
+        string stringToTest = string.Empty;
 
-            bool result = stringToTest.IsEmpty();
+        bool result = stringToTest.IsEmpty();
 
-            Assert.True(result);
-        }
+        Assert.True(result);
+    }
 
-        [Fact]
-        public void IsEmpty_ReturnsFalse_WhenStringIsNull()
-        {
-            string stringToTest = null;
+    [Fact]
+    public void IsEmpty_ReturnsFalse_WhenStringIsNull()
+    {
+        string stringToTest = null;
 
-            bool result = stringToTest.IsEmpty();
+        bool result = stringToTest.IsEmpty();
 
-            Assert.False(result);
-        }
+        Assert.False(result);
+    }
 
-        [Fact]
-        public void IsEmpty_ReturnsFalse_WhenStringIsWhiteSpace()
-        {
-            string stringToTest = " ";
+    [Fact]
+    public void IsEmpty_ReturnsFalse_WhenStringIsWhiteSpace()
+    {
+        string stringToTest = " ";
 
-            bool result = stringToTest.IsEmpty();
+        bool result = stringToTest.IsEmpty();
 
-            Assert.False(result);
-        }
+        Assert.False(result);
+    }
 
-        [Fact]
-        public void IsEmpty_ReturnsFalse_WhenStringIsFull()
-        {
-            string stringToTest = "test";
+    [Fact]
+    public void IsEmpty_ReturnsFalse_WhenStringIsFull()
+    {
+        string stringToTest = "test";
 
-            bool result = stringToTest.IsEmpty();
+        bool result = stringToTest.IsEmpty();
 
-            Assert.False(result);
-        }
+        Assert.False(result);
     }
 }

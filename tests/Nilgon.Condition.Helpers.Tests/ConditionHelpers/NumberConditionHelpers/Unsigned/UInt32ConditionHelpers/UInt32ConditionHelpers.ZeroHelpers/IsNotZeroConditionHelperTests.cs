@@ -1,27 +1,26 @@
 ﻿using Xunit;
 
-namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.UInt32ConditionHelpers.ZeroHelpers
+namespace Nilgon.Condition.Helpers.Tests.ConditionHelpers.UInt32ConditionHelpers.ZeroHelpers;
+
+public sealed class IsNotZero_Condition_Helper_Tests
 {
-    public sealed class IsNotZero_Condition_Helper_Tests
+    [Fact]
+    public void IsNotZero_ReturnsTrue_WhenNumberIsNotZero()
     {
-        [Fact]
-        public void IsNotZero_ReturnsTrue_WhenNumberIsNotZero()
-        {
-            uint numberToTest = 1;
+        uint numberToTest = 1;
 
-            bool result = numberToTest.IsNotZero();
+        bool result = numberToTest.IsNotZero();
 
-            Assert.True(result);
-        }
+        Assert.True(result);
+    }
 
-        [Fact]
-        public void IsNotZero_ReturnsFalse_WhenNumberIsZero()
-        {
-            uint numberToTest = 0;
+    [Fact]
+    public void IsNotZero_ReturnsFalse_WhenNumberIsZero()
+    {
+        uint numberToTest = 0;
 
-            bool result = numberToTest.IsNotZero();
+        bool result = numberToTest.IsNotZero();
 
-            Assert.False(result);
-        }
+        Assert.False(result);
     }
 }

@@ -1,19 +1,18 @@
-﻿namespace Nilgon.Condition.Helpers
+﻿namespace Nilgon.Condition.Helpers;
+
+public static partial class UIntPtrConditionHelpers
 {
-    public static partial class UIntPtrConditionHelpers
+    public static bool IsZero(this nuint value)
     {
-        public static bool IsZero(this nuint value)
-        {
-            bool conditionResult = value == UIntPtr.Zero;
+        bool conditionResult = value == UIntPtr.Zero;
 
-            return conditionResult;
-        }
+        return conditionResult;
+    }
 
-        public static bool IsNotZero(this nuint value)
-        {
-            bool conditionResult = value != UIntPtr.Zero;
+    public static bool IsNotZero(this nuint value)
+    {
+        bool conditionResult = value != UIntPtr.Zero;
 
-            return conditionResult;
-        }
+        return conditionResult;
     }
 }

@@ -1,19 +1,18 @@
-﻿namespace Nilgon.Condition.Helpers
+﻿namespace Nilgon.Condition.Helpers;
+
+public static partial class SByteConditionHelpers
 {
-    public static partial class SByteConditionHelpers
+    public static bool IsZero(this sbyte value)
     {
-        public static bool IsZero(this sbyte value)
-        {
-            bool conditionResult = value == 0;
-            
-            return conditionResult;
-        }
+        bool conditionResult = value == 0;
+        
+        return conditionResult;
+    }
 
-        public static bool IsNotZero(this sbyte value)
-        {
-            bool conditionResult = value != 0;
+    public static bool IsNotZero(this sbyte value)
+    {
+        bool conditionResult = value != 0;
 
-            return conditionResult;
-        }
+        return conditionResult;
     }
 }

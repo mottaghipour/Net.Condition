@@ -1,21 +1,20 @@
 ﻿using System;
 
-namespace Nilgon.Condition.Helpers
+namespace Nilgon.Condition.Helpers;
+
+public static partial class IntPtrConditionHelpers
 {
-    public static partial class IntPtrConditionHelpers
+    public static bool IsZero(this nint value)
     {
-        public static bool IsZero(this nint value)
-        {
-            bool conditionResult = value == IntPtr.Zero;
+        bool conditionResult = value == IntPtr.Zero;
 
-            return conditionResult;
-        }
+        return conditionResult;
+    }
 
-        public static bool IsNotZero(this nint value)
-        {
-            bool conditionResult = value != IntPtr.Zero;
+    public static bool IsNotZero(this nint value)
+    {
+        bool conditionResult = value != IntPtr.Zero;
 
-            return conditionResult;
-        }
+        return conditionResult;
     }
 }
