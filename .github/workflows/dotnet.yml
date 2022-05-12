@@ -23,6 +23,4 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
-    - name: Git Semantic Version
-      uses: PaulHatch/semantic-version@v5.0.0-alpha2
-
+      
